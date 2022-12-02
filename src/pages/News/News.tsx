@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
-import BlogCard from '../../components/BlogCard/BlogCard'
+import BlogCard from '../../components/BlogDetails/BlogDetails'
 import PageLabel from '../../components/Labels/PageLabel'
 
 import { news } from '../../db'

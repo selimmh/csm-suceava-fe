@@ -9,7 +9,7 @@ type Props = {
     onClick: () => void
 }
 
-const BlogCard = ({
+const BlogDetails = ({
     long_title,
     content,
     image_url,
@@ -37,4 +37,4 @@ const BlogCard = ({
     )
 }
 
-export default BlogCard
+export default BlogDetails

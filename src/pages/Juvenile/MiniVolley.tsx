@@ -1,5 +1,5 @@
 import React from 'react'
-import PlayerCard from '../../components/PlayerCard/PlayerCard'
+import PlayerCard from '../../components/PlayerDetails/PlayerDetails'
 import PageLabel from '../../components/Labels/PageLabel'
 import { players } from '../../db'
 

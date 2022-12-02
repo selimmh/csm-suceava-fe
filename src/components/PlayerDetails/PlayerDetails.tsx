@@ -10,7 +10,7 @@ type Props = {
     onClick?: () => void
 }
 
-const PlayerCard = ({
+const PlayerDetails = ({
     image,
     fullName,
     nationality,
@@ -52,4 +52,4 @@ const PlayerCard = ({
     )
 }
 
-export default PlayerCard
+export default PlayerDetails
