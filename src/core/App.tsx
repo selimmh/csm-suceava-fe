@@ -22,7 +22,6 @@ import {
     Partners,
     Coaches,
     Players,
-    Seniors,
 } from './../pages'
 
 function App() {
@@ -64,10 +63,10 @@ function App() {
                         </Route>
 
                         {/* seniors */}
-                        <Route
+                        {/* <Route
                             path={ROUTES.seniors.path}
                             element={<Seniors />}
-                        />
+                        /> */}
 
                         {/* juvenile */}
                         <Route path={ROUTES.juvenile.path}>

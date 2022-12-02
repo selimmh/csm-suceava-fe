@@ -24,5 +24,3 @@ export { default as Partners } from './Partners/Partners'
 
 export { default as Coaches } from './Personnel/Coaches'
 export { default as Players } from './Personnel/Players'
-
-export { default as Seniors } from './Seniors/Seniors'

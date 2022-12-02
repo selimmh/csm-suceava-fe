@@ -39,10 +39,10 @@ const SidebarOptions = [
         ],
     },
 
-    {
-        name: 'SENIORI',
-        path: ROUTES.seniors.path,
-    },
+    // {
+    //     name: 'SENIORI',
+    //     path: ROUTES.seniors.path,
+    // },
 
     {
         name: 'JUVENILI',
