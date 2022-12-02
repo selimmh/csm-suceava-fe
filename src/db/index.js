@@ -45,4 +45,13 @@ const matches = Array(10)
         isInFuture: Math.random() > 0.5,
     }))
 
-export { players, news, matches }
+const partners = Array(20)
+    .fill(null)
+    .map((_, index) => ({
+        id: index,
+        name: 'Partner',
+        logo: img,
+        website: 'https://www.google.com',
+    }))
+
+export { players, news, matches, partners }
