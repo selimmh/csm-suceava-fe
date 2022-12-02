@@ -2,17 +2,7 @@ import React from 'react'
 import PlayerCard from '../../components/PlayerCard/PlayerCard'
 import PageLabel from '../../components/Labels/PageLabel'
 
-const players = Array(10)
-    .fill(null)
-    .map((_, index) => ({
-        id: index,
-        image: `https://picsum.photos/seed/${index + Math.random()}/200/400`,
-        fullName: 'Abuhaiencei Florinelicu',
-        nationality: 'Roman',
-        position: 'Atac',
-        birthDate: '19',
-        height: '1.80',
-    }))
+import { players } from '../../db'
 
 const Players = () => {
     return (

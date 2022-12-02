@@ -7,6 +7,7 @@ type Props = {
     position: string
     birthDate: string
     height: string
+    onClick?: () => void
 }
 
 const PlayerCard = ({
@@ -16,19 +17,20 @@ const PlayerCard = ({
     position,
     birthDate,
     height,
+    onClick,
 }: Props) => {
     return (
-        <div className="flex border p-4 shadow-lg rounded-md w-full h-60 hover:shadow-xl transition-all duration-300">
+        <div
+            onClick={onClick}
+            className="flex border p-4 shadow-lg rounded-md w-full h-60 hover:shadow-xl transition-all duration-300 cursor-pointer"
+        >
             <img
                 className="w-32 h-48 object-cover mr-8 border"
                 src={image}
                 alt={fullName}
             />
-            <div className="flex flex-col justify-between">
-                <div>
-                    <span className="font-bold text-sm">Nume: </span>
-                    {fullName}
-                </div>
+            <div className="flex flex-col text-lg gap-1">
+                <div className="text-2xl">{fullName}</div>
                 <div>
                     <span className="font-bold text-sm">Nationalitate: </span>
                     {nationality}
