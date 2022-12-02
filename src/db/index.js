@@ -1,10 +1,11 @@
-import profileImg from '../assets/player.jpg'
+import img from '../assets/player.jpg'
+import moment from 'moment'
 
 const players = Array(5)
     .fill(null)
     .map((_, index) => ({
         id: index.toString(),
-        image: profileImg,
+        image: img,
         fullName: 'Lorem ipsum',
         nationality: 'Test',
         position: 'Server',
@@ -26,4 +27,22 @@ const news = Array(10)
         created_by: 'Adam Smith',
     }))
 
-export { players, news }
+const matches = Array(10)
+    .fill(null)
+    .map((_, index) => ({
+        id: index,
+        ourTeam: 'Our team',
+        ourTeamScore: Math.floor(Math.random() * 5),
+        ourTeamLogo: img,
+        opponentTeam: 'Opponent team',
+        opponentTeamScore: Math.floor(Math.random() * 5),
+        opponentTeamLogo: img,
+        date: moment()
+            .add(Math.floor(Math.random() * 100), 'days')
+            .format('YYYY-MM-DD'),
+        time: '12:00',
+        location: 'Location',
+        isInFuture: Math.random() > 0.5,
+    }))
+
+export { players, news, matches }

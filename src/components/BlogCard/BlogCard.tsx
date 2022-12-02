@@ -20,7 +20,7 @@ const BlogCard = ({
     return (
         <div
             onClick={onClick}
-            className="rounded-md shadow-lg flex w-full border overflow-hidden h-64 cursor-pointer hover:shadow-xl transition-all duration-300"
+            className="rounded-md shadow-lg flex w-full border overflow-hidden h-64 cursor-pointer hover:shadow-xl transition-all duration-300 max-w-7xl"
         >
             <img src={image_url} alt="" className="h-full" />
             <div className="flex flex-col p-8">
