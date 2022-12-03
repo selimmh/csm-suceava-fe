@@ -24,9 +24,11 @@ import {
     Players,
 } from './../pages'
 
+import useAuth, { AuthProvider } from '../context/useAuth'
+
 function App() {
     return (
-        <div>
+        <AuthProvider>
             <Router>
                 <AppLayout>
                     <Sidebar />
@@ -120,7 +122,7 @@ function App() {
                     </Routes>
                 </AppLayout>
             </Router>
-        </div>
+        </AuthProvider>
     )
 }
 
