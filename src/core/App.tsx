@@ -28,8 +28,8 @@ function App() {
     return (
         <div>
             <Router>
-                <Sidebar />
                 <AppLayout>
+                    <Sidebar />
                     <Routes>
                         {/* home */}
                         <Route path={ROUTES.home.path} element={<Home />} />
@@ -61,12 +61,6 @@ function App() {
                                 element={<Players />}
                             />
                         </Route>
-
-                        {/* seniors */}
-                        {/* <Route
-                            path={ROUTES.seniors.path}
-                            element={<Seniors />}
-                        /> */}
 
                         {/* juvenile */}
                         <Route path={ROUTES.juvenile.path}>
