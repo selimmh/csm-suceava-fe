@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from '../components/Footer/Footer'
+import Sidebar from '../components/Sidebar/Sidebar'
 
 type Props = {
     children: React.ReactNode
@@ -8,6 +9,7 @@ type Props = {
 const AppLayout = ({ children }: Props) => {
     return (
         <div className="ml-72 p-8 pb-48 box-border relative min-h-screen">
+            <Sidebar />
             <div>{children}</div>
             <div className="absolute left-0 right-0 bottom-0 w-full">
                 <Footer />

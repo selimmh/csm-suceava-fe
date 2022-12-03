@@ -7,8 +7,6 @@ import React, {
     useState,
 } from 'react'
 
-import { useNavigate, useLocation } from 'react-router-dom'
-
 interface User {
     id: string
     name: string
@@ -25,23 +23,18 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType>({} as AuthContextType)
 
-export const AuthProvider = ({
+export function AuthProvider({
     children,
 }: {
     children: ReactNode
-}): JSX.Element => {
+}): JSX.Element {
     const [user, setUser] = useState<User>()
     const [error, setError] = useState<any>()
     const [loading, setLoading] = useState<boolean>(false)
     const [loadingInitial, setLoadingInitial] = useState<boolean>(true)
 
-    const navigate = useNavigate()
-    const location = useLocation()
-
     // If we change page, reset the error state.
-    useEffect(() => {
-        if (error) setError(null)
-    }, [location.pathname])
+    // useeffect here
 
     useEffect(() => {
         // get user ********************************
@@ -52,7 +45,7 @@ export const AuthProvider = ({
         //     .finally(() => setLoadingInitial(false))
     }, [])
 
-    const login = (email: string, password: string) => {
+    function login(email: string, password: string) {
         // login ********************************
         // setLoading(true)
         // sessionsApi
@@ -65,7 +58,7 @@ export const AuthProvider = ({
         //     .finally(() => setLoading(false))
     }
 
-    const logout = () => {
+    function logout() {
         // logout ********************************
         // sessionsApi.logout().then(() => setUser(undefined))
     }
@@ -83,7 +76,8 @@ export const AuthProvider = ({
 
     return (
         <AuthContext.Provider value={memoedValue}>
-            {!loadingInitial && children}
+            {/* {!loadingInitial && children} */}
+            {children}
         </AuthContext.Provider>
     )
 }
