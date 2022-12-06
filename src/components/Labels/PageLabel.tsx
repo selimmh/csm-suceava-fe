@@ -2,7 +2,7 @@ import React from 'react'
 
 type Props = {
     label: string
-    description: string
+    description?: string
 }
 
 const PageLabel = ({ label, description }: Props) => {

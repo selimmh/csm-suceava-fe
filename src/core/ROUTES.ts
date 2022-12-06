@@ -36,8 +36,7 @@ const ROUTES = {
     gallery: { path: '/gallery' },
 
     // admin
-    admin: { path: '/admin' },
-    login: { path: '/admin/login' },
+    login: { path: '/login' },
 }
 
 export default ROUTES

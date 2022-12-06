@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
     return (
-        <div className="h-40 bg-gray-100 flex flex-col items-center justify-center px-8 py-4 text-gray-600">
+        <div className="h-40 bg-gray-100 flex flex-col items-center justify-center px-8 py-4 text-gray-600 absolute left-0 right-0 bottom-0 w-full">
             <div className="flex w-full justify-between">
                 {/* logo */}
                 <CSMLogo />

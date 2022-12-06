@@ -3,8 +3,10 @@ import SidebarOptions from './SidebarOptions'
 import SidebarItem from './SidebarItem'
 import { ReactComponent as CSMLogo } from './../../assets/logo.svg'
 import { useLocation, useNavigate } from 'react-router'
+import useAuth from '../../context/useAuth'
 
 const Sidebar = () => {
+    const { user } = useAuth()
     const location = useLocation()
     const navigate = useNavigate()
     const isCurrentRouteActive = (path: string) => {
@@ -29,6 +31,9 @@ const Sidebar = () => {
                     />
                 ))}
             </ul>
+
+            {user?.role === 'admin' && <div>admin mode</div>}
+            {user?.role === 'admin' && <div>logout</div>}
         </nav>
     )
 }

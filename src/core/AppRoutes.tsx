@@ -84,9 +84,7 @@ const AppRoutes = () => {
                     <Route path={ROUTES.gallery.path} element={<Gallery />} />
 
                     {/* admin */}
-                    <Route path={ROUTES.admin.path}>
-                        <Route path={ROUTES.login.path} element={<Login />} />
-                    </Route>
+                    <Route path={ROUTES.login.path} element={<Login />} />
 
                     {/* other */}
                     <Route path="*" element={<NotFound />} />

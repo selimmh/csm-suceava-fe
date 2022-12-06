@@ -9,8 +9,8 @@ import React, {
 
 interface User {
     id: string
-    name: string
     email: string
+    role: 'admin' | 'moderator'
 }
 
 interface AuthContextType {
@@ -33,6 +33,8 @@ export function AuthProvider({
     const [loading, setLoading] = useState<boolean>(false)
     const [loadingInitial, setLoadingInitial] = useState<boolean>(true)
 
+    console.log(user)
+
     // If we change page, reset the error state.
     // useeffect here
 
@@ -46,6 +48,12 @@ export function AuthProvider({
     }, [])
 
     function login(email: string, password: string) {
+        setUser({
+            id: '1',
+            email: email,
+            role: 'admin',
+        })
+
         // login ********************************
         // setLoading(true)
         // sessionsApi

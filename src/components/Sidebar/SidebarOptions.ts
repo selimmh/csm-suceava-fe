@@ -83,14 +83,8 @@ const SidebarOptions = [
         path: ROUTES.gallery.path,
     },
     {
-        name: 'ADMINISTRARE',
-        path: ROUTES.admin.path,
-        subroutes: [
-            {
-                name: 'LOGIN',
-                path: ROUTES.login.path,
-            },
-        ],
+        name: 'LOGIN',
+        path: ROUTES.login.path,
     },
 ]
 
