@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppLayout from './AppLayout'
-import ROUTES from './ROUTES'
+import ROUTES from '../constants/ROUTES'
 
 import {
     Login,

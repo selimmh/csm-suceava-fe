@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
-import BlogCard from '../../components/BlogDetails/BlogDetails'
+import BlogDetails from '../../components/BlogDetails/BlogDetails'
 import PageLabel from '../../components/Labels/PageLabel'
 
 import { news } from '../../db'
@@ -16,7 +16,7 @@ const News = () => {
             <div className="flex flex-col gap-4">
                 {news.map((blog) => (
                     <div key={blog.id}>
-                        <BlogCard
+                        <BlogDetails
                             onClick={() => navigate(`/news/${blog.id}`)}
                             image_url={blog.image_url}
                             long_title={blog.long_title}

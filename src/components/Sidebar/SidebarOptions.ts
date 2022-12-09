@@ -1,4 +1,4 @@
-import ROUTES from '../../core/ROUTES'
+import ROUTES from '../../constants/ROUTES'
 
 const SidebarOptions = [
     {

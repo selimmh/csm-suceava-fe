@@ -1,5 +1,5 @@
 import React from 'react'
-import PlayerCard from '../../components/PlayerDetails/PlayerDetails'
+import PlayerDetails from '../../components/PlayerDetails/PlayerDetails'
 import PageLabel from '../../components/Labels/PageLabel'
 
 import { players } from '../../db'
@@ -14,7 +14,7 @@ const Players = () => {
             <div className="flex flex-wrap gap-4">
                 {players.map((player) => (
                     <div className="w-[calc(50%-8px)]">
-                        <PlayerCard
+                        <PlayerDetails
                             key={player.id}
                             image={player.image}
                             fullName={player.fullName}
